@@ -86,4 +86,49 @@
 			flex: 1;
 		}
 
-		 
+		  /********************************/
+		/******   left    *****************/
+		/**********************************/
+		.left {
+			position: relative;
+			overflow: hidden;
+		}
+		.left .background {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			filter: blur(0px);
+		}
+		.left h1 {
+			color: #ffffff;
+			margin: 20px 0 0 0;
+			text-align: center;
+			font-weight: bold;
+		}
+		/* 动画库 */
+		.left h1{
+			-webkit-animation-duration: 2s;
+			-moz-animation-duration: 2s;
+			-o-animation-duration: 2s;
+			animation-duration: 2s;
+
+			-webkit-animation-delay: 2s;
+			-moz-animation-delay: 2s;
+			-o-animation-delay: 2s;
+			animation-delay: 2s;
+			-webkit-animation-iteration-count: infinite; /*保持一直持续动画效果*/
+			animation-iteration-count: infinite;
+		}
+		.left h1 i{
+			font-size: 38px;
+		}
+		.test4 {
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
