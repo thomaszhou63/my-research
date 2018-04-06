@@ -241,7 +241,24 @@
 					</ul>
 				</div>
 
-			
+				<div class="right">
+					<form method="POST" enctype="multipart/form-data" action="">
+						<!--<input class="bttn-jelly bttn-md bttn-primary" type="file" name="videoname">-->
+						<div  class="btn-add" style="position: relative; width: 180px; height: 50px; ">
+							<input class="" style="opacity: 0; position: absolute; z-index: 10; width: 80px; height: 50px;" type="file">
+							<span class="btn" style="position: absolute;left: 2px;"><i class="iconfont icon-jiahao2fill"></i>添加视频</span>
+						</div>
+
+						<div style="display: inline-block">
+							<input class="btn btn-addlist" type="submit" value="+ 加入列表">
+							<a href="/" class="btn back-btn"><i class="iconfont icon-back"></i>返回</a>
+						</div>
+					</form>
+					<div class="video">
+						{% block body %}{% endblock %}
+					</div>
+
+				</div>
 			</div>
 
 
