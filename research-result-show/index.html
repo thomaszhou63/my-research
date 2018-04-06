@@ -9,7 +9,6 @@
 
 
 		<link rel="stylesheet" href="http://at.alicdn.com/t/font_456899_xctn77pwn0v5z5mi.css">
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<link href="css/btn-jelly.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/animate.css">
 	  <style>
@@ -52,16 +51,9 @@
 			background: #109ef8;
 			margin: 5px;
 		}
-
-
-		/* a    button*/
 		 i{
 			margin:0 4px 0 0;
 		}
-
-		/*.add::before {*/
-			/*background: #000;*/
-		/*}*/
 		/********************************/
 		/******   header    *****************/
 		/**********************************/
@@ -125,18 +117,21 @@
 		.left h1 i{
 			font-size: 38px;
 		}
-		.test4 {
+		.video-list {
 			position: absolute;
 			right: 20px;
 			top: 50%;
 			transform: translateY(-50%);
 		}
 
-		.test4 .list {
+		.video-list .list-item {
 			width: 200px;
 			margin: 10px 0;
+			color: #d6d6d6;
+			color: #d6d6d6;
+
 		}
-		.test4 .list a {
+		.video-list .list-item a {
 			height: 40px;
 			padding:6px 6px;
 			line-height: 28px;
@@ -153,7 +148,7 @@
 			background-image: -webkit-linear-gradient(93deg, #708090 0%, #2a90d4 100%);
 			overflow: hidden;
 		}
-		.test4 .list a:hover {
+		.video-list .list-item a:hover {
 			-webkit-transform: translateY(-3px);
 			-ms-transform: translateY(-3px);
 			transform: translateY(-3px);
@@ -162,14 +157,19 @@
 			-webkit-transition: all .5s ease-out;
 			transition: all .5s ease-out;
 			/*border: 2px solid rgba(28, 163, 206, 0.9);*/
-			color:#b716a9;
+			/*color: #7834b7;*/
+			color: rgba(15, 204, 23, 0.96);
 			font-weight:bold;
 		}
-		.test4 .list i {
+		/*.active {*/
+			/*color: #7834b7;*/
+			/*font-weight:bold;*/
+		/*}*/
+		.video-list .list-item i {
 			margin:0 12px 0 4px;
 			font-size: 20px;
 		}
-		.test4 .list span {
+		.video-list .list-item span {
 			vertical-align: top;
 			text-align: center;
 		}
@@ -182,6 +182,7 @@
 			position: relative;
 			background: #e9e9e9;
 			display: inline-block;
+			overflow: hidden;
 		}
 		.right form {
 			margin: 20px 0;
@@ -201,15 +202,24 @@
 			margin:0 0  0 200px;
 		}
 		/***	video	**/
-		.right .video {
-			width: 500px;
-			height: 400px;
-			background-color: #f8f8f8;
+		.right .video-container {
+			width: 600px;
+			height: 428px;
 			position: absolute;
 			right:50%;
 			transform: translateX(50%);
 			top: 200px;
-
+		}
+		.right .video-container h2 {
+			line-height: 20px;
+			color: #0E83CD;
+			margin-bottom: 8px;
+			text-align: center;
+		}
+		.right .video {
+			width: 600px;
+			height: 400px;
+			background-color: #f8f8f8;
 		}
 		</style>
 
@@ -217,11 +227,12 @@
 
   <body>
     <div class="main">
-
+			<!--header-->
 			<div class="header">
 
 			</div>
 
+			<!--container-->
 			<div class="container">
 				<div class="left">
 					<h1 class="animated swing infinite"><i class="iconfont icon-zhinenghua"></i>测试视频列表</h1>
@@ -229,18 +240,17 @@
 						<!--<img src="../static/img/1.png" alt="背景图片" width="100%" height="100%">-->
 						<img src="img/1.png" alt="背景图片" width="100%" height="100%">
 					</div>
-					<ul class="test4">
+					<ul class="video-list">
 						<!--{% for nom in nomdefichier %}-->
 						<!--<li class="list"><a class="btn-block" style="text-decoration: none" href="/list/{{ nom }}"><i class="iconfont icon-videofill" ></i><span>istnum0</span></a></li>-->
-						<li class="list"><a class="btn-block" style="text-decoration: none" href="#"><i class="iconfont icon-videofill" ></i><span>istnum0</span></a></li>
-						<li class="list"><a class="btn-block" style="text-decoration: none" href="#"><i class="iconfont icon-videofill" ></i><span>istnum0</span></a></li>
-						<li class="list"><a class="btn-block" style="text-decoration: none" href="#"><i class="iconfont icon-videofill" ></i><span>istnum0</span></a></li>
-						<li class="list"><a class="btn-block" style="text-decoration: none" href="#"><i class="iconfont icon-videofill" ></i><span>istnum0</span></a></li>
-						<li class="list"><a class="btn-block" style="text-decoration: none" href="#"><i class="iconfont icon-videofill" ></i><span>istnum0</span></a></li>
+						<li class="list-item active"><a class="btn-block" style="text-decoration: none" href="#"><i class="iconfont icon-videofill" ></i><span>istnum0</span></a></li>
+						<li class="list-item"><a class="btn-block" style="text-decoration: none" href="#"><i class="iconfont icon-videofill" ></i><span>istnum1</span></a></li>
+						<li class="list-item"><a class="btn-block" style="text-decoration: none" href="#"><i class="iconfont icon-videofill" ></i><span>istnum2</span></a></li>
+						<li class="list-item"><a class="btn-block" style="text-decoration: none" href="#"><i class="iconfont icon-videofill" ></i><span>istnum3</span></a></li>
+						<li class="list-item"><a class="btn-block" style="text-decoration: none" href="#"><i class="iconfont icon-videofill" ></i><span>istnum4</span></a></li>
 						<!--{% endfor %}-->
 					</ul>
 				</div>
-
 				<div class="right">
 					<form method="POST" enctype="multipart/form-data" action="">
 						<!--<input class="bttn-jelly bttn-md bttn-primary" type="file" name="videoname">-->
@@ -254,17 +264,27 @@
 							<a href="/" class="btn back-btn"><i class="iconfont icon-back"></i>返回</a>
 						</div>
 					</form>
-					<div class="video">
-						{% block body %}{% endblock %}
+					<div class="video-container">
+						<h2>视频演示</h2>
+						<div class="video">
+							{% block body %}{% endblock %}
+						</div>
 					</div>
-
 				</div>
 			</div>
-
-
-
 		</div>
-	<script src="/static/js/jquery.js"></script>
-	<script src="/static/js/bootstrap.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script>
+			$(document).ready(function() {
+			  $('.list-item').on('click', function() {
+			    $('.video-container').find('h2').text(`正在演示的视频：${$(this).text()}`) ;
+				});
+
+			  $('.back-btn').on('click', function() {
+          $('.video-container').find('h2').text('视频演示') ;
+				})
+			})
+
+		</script>
   </body>
 </html>
